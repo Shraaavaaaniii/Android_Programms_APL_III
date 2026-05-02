@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="chat_page_bg">#E1E5E1</color>
+    <color name="chat_header_bg">#F5F7F5</color>
+    <color name="chat_title">#111B33</color>
+    <color name="chat_subtle_text">#6E7C95</color>
+    <color name="chat_divider">#D2E7D7</color>
+    <color name="chat_accent">#12D925</color>
+    <color name="chat_accent_dark">#0A8D2A</color>
+    <color name="chat_time">#8292AB</color>
+
+    <color name="profile_page_bg">#E2E5E4</color>
+    <color name="profile_title">#111B33</color>
+    <color name="profile_green">#12D925</color>
+    <color name="profile_chevron">#8C9AAE</color>
+    <color name="profile_logout">#E11D1D</color>
+</resources>

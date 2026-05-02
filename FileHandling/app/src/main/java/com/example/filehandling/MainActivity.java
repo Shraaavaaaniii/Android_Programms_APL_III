@@ -1,24 +1,42 @@
 package com.example.filehandling;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+
+import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText editText;
+    Button button;
+    String fileName = "mydata.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        editText = findViewById(R.id.editText);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(v -> {
+            String data = editText.getText().toString();
+
+            try {
+                FileOutputStream fos = openFileOutput(fileName, MODE_PRIVATE);
+                fos.write(data.getBytes());
+                fos.close();
+
+                Toast.makeText(this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Error Saving File", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

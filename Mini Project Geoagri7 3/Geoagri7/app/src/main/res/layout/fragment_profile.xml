@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_page_bg"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/buttonBackProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Back"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="@color/profile_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Profile"
+                android:textColor="@color/profile_title"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="184dp"
+                    android:layout_height="184dp"
+                    android:background="@drawable/profile_avatar_ring"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProfilePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/profile_avatar_inner_bg"
+                        android:contentDescription="Profile photo"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textFarmerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Farmer John"
+                    android:textColor="@color/profile_title"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:contentDescription="Location"
+                        android:src="@android:drawable/ic_menu_mylocation"
+                        android:tint="@color/profile_green" />
+
+                    <TextView
+                        android:id="@+id/textFarmerLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Salinas Valley, CA"
+                        android:textColor="@color/profile_green"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/buttonEditProfilePhoto"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="126dp"
+                android:background="@drawable/profile_edit_bg"
+                android:contentDescription="Edit profile"
+                android:padding="14dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:tint="@color/profile_title" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/cardPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_card_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/profile_icon_bg"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Personal information"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:tint="@color/profile_green" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="Personal Information"
+                android:textColor="@color/profile_title"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="Open"
+                android:src="@android:drawable/ic_media_next"
+                android:tint="@color/profile_chevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardMyFarms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_card_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/profile_icon_bg"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="My farms"
+                    android:src="@android:drawable/ic_dialog_map"
+                    android:tint="@color/profile_green" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="My Farms"
+                android:textColor="@color/profile_title"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="Open"
+                android:src="@android:drawable/ic_media_next"
+                android:tint="@color/profile_chevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_card_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/profile_icon_bg"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Notifications"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:tint="@color/profile_green" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="Notifications"
+                android:textColor="@color/profile_title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textNotificationBadge"
+                android:layout_width="40dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/profile_count_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/profile_title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="Open"
+                android:src="@android:drawable/ic_media_next"
+                android:tint="@color/profile_chevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardSubscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_card_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/profile_icon_bg"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Subscription plan"
+                    android:src="@android:drawable/ic_menu_save"
+                    android:tint="@color/profile_green" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subscription Plan"
+                    android:textColor="@color/profile_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textCurrentPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="No plan selected"
+                    android:textColor="@color/profile_chevron"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="Open"
+                android:src="@android:drawable/ic_media_next"
+                android:tint="@color/profile_chevron" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/profile_logout_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/profile_logout_icon_bg"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Logout"
+                    android:src="@android:drawable/ic_lock_power_off"
+                    android:tint="@color/profile_logout" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Logout"
+                android:textColor="@color/profile_logout"
+                android:textSize="19sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

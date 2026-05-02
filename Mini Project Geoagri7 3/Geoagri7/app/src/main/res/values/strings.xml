@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Geoagri</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyBq_97O6_EneF5NBnweSGOurp66Qc4t6wo</string>
+    <string name="chat_hint">Ask about your crop health...</string>
+    <string name="chat_send">Send message</string>
+    <string name="chat_typing">AgriAssist AI is typing...</string>
+    <string name="chat_status_online">Online</string>
+    <string name="chat_status_typing">Typing...</string>
+    <string name="chat_status_error">Connection issue</string>
+</resources>
